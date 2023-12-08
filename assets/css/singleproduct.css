@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+  background-color: rgb(99, 198, 99);
+}
+.singleimage{
+    width: 300px;
+}
+#productDetails{
+  background-color: #ffffff;
+  padding: 20px;
+}
+a{
+  text-decoration: none;
+}

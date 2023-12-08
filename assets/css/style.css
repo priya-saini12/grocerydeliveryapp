@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(../images/grocery6.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.form{
+    background-color: rgba(0, 0, 0, 0.54);;
+    margin-top: 5%;
+   }
+a{
+    text-decoration: none;
+    color: rgb(92, 216, 92);
+}
+#err1, #error1, #error2, #error3, #error4{
+    color: red;
+}
+h2, p{
+    color: white;
+}
+a:hover {
+    color: #fff;
+  }

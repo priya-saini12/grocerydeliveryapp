@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/all.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+     <title>Grocery Delivery App</title>
+</head>
+<body>
+
+<div class="container">
+<div class="row">
+<div class="col-6 offset-3 form p-4 rounded-3">
+
+    <form>
+        <h2 class="text-center">Create Account</h2>
+
+                   <div>
+                    <input type="text" class="form-control" id="name" placeholder="Enter name">
+                    <span id="error1"></span></div>
+                   <div>
+                    <input type="number" class="form-control mt-3" id="number" placeholder="Enter Phone Number" >   
+                    <span id="error2"></span> </div>         
+                  <div>
+                    <input type="email" class="form-control mt-3" id="email" placeholder="Enter email" >
+                    <span id="error3"></span></div>
+                   <div>
+                    <input type="password" class="form-control mt-3" id="password" placeholder="Password" >
+                    <span id="error4"></span></div>
+                    <button type="button" class="btn btn-primary mt-3" id="register" onclick="registration()">
+                            Create Account
+                        </button>
+                <p class="">Have an account? <a href="index.html">Log In </a></p>                                                                 
+      </form>
+
+</div>
+</div>
+</div>
+
+    
+    <script src="assets/js/bootstrap.bundle.js"></script>
+    <script src="assets/js/signup.js"></script>
+</body>
+</html>
