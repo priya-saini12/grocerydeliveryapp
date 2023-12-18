@@ -50,4 +50,8 @@ function address() {
      
     window.location.href = "../invoice.html";
   }
-  
+  function logout() {
+    localStorage.setItem('isLoggedIn', false);
+    window.loggedInUser = null; 
+    window.location.href = '../index.html';
+  }

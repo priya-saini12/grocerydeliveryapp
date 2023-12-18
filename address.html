@@ -1,143 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/all.css">
-    <link rel="stylesheet" href="assets/css/address.css">
-     <title>Grocery Delivery App</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/all.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>Grocery Delivery App</title>
 </head>
+
 <body>
 
-<!-- navbar -->
-    <nav class="navbar navbar-expand-lg p-3"  style="background-color: white">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Grocery Store</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav m-auto me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="home.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">About Us</a>
-              </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Contact Us</a>
-                </li> 
-            </ul>
-           <ul class="navbar-nav d-flex flex-row me-1">
-              <li class="nav-item me-3 me-lg-0">
-                <a href="cart.html" class="btn btn-outline-primary"><i class="fa-solid fa-cart-shopping"></i></button></a>
-                <a href="invoice.html" class="btn btn-outline-success">Checkout</i></button></a>
-                <a href="#" class="btn btn-outline-danger" onclick="logout()">Logout</button></a>
-                  </li>
-          </ul>
+  <!-- navbar -->
+  <nav class="navbar navbar-expand-lg p-3" style="background-color: white">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="../grocerydeliveryapp/assets/images/logo.svg" class="main-logo"
+          style="width: 100%; max-width: 175px;"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav m-auto me-auto mb-2 mb-lg-0 gap-3">
+          <li class="nav-item">
+            <a class="nav-link active fw-bold fs-6 text-secondary" aria-current="page" href="home.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fs-6    text-secondary" href="#">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fs-6 text-secondary" href="#">Contact Us</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav d-flex flex-row me-1">
+          <li class="nav-item me-3 me-lg-0">
+            <a href="cart.html" class="btn btn-outline-primary me-2"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a href="invoice.html" class="btn btn-outline-success me-2">Checkout</i></a>
+            <a href="#" class="btn btn-outline-danger" onclick="logout()">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="login-form py-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-sm-10 col-md-8 col-lg-6 col-xl-5">
+          <div class="card">
+            <div class="card-header title-head">
+              <h1 class="fs-2 fw-bold mb-0 text-capitalize fw-bold mb-4 text-center">Address</h1>
+            </div>
+            <div class="card-body p-0">
+              <form>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <input type="text" id="name" class="form-control" placeholder="Enter name" autofocus>
+                      <span id="er1" class="text-danger fst-italic py-2"></span>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <input type="text" id="adress" placeholder="Enter Address" class="form-control">
+                      <span id="er2" class="text-danger fst-italic py-2"></span>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <select name="state" id="state" class="form-control">
+                        <option value="state">State</option>
+                        <option value="Himachal Pradesh">Himachal Pradesh</option>
+                        <option value="Punjab">Punjab</option>
+                        <option value="Haryana">Haryana</option>
+                      </select>
+                      <span id="er3" class="text-danger fst-italic py-2"></span>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <select name="city" id="city" class="form-control">
+                        <option value="city">City</option>
+                        <option value="Kangra">Kangra</option>
+                        <option value="Una">Una</option>
+                        <option value="Delhi">Hamirpur</option>
+                      </select>
+                      <span id="er4" class="text-danger fst-italic py-2"></span>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <input type="number" id="pin" class="form-control" placeholder="Enter Pin">
+                      <span id="er5" class="text-danger fst-italic py-2"></span>
+                    </div>
+                  </div>
+
+                  <div class="col-md-12 text-center">
+                    <button type="button" class="btn btn-primary log-btn w-100 text-capitalize" id="register"
+                      onclick="address()">
+                      Add Address
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
-      </nav>
-      
+      </div>
+    </div>
+  </main>
 
-<div class="container">
-<div class="row">
-<div class="col-6 offset-3 p-4 rounded-3">
+  <!-- footer -->
+  <footer class="text-center text-lg-start text-dark"
+    style="background-color: #ffffff; position: relative; width: 100%; bottom: 0px; left: 0px;">
+        <div class="container text-center text-md-start mt-5">
 
-    <form>
-        <h2 class="text-center text-white">Address</h2>
-
-
-                   <div>
-                    <input type="text" class="form-control" id="name" placeholder="Enter name">
-                    <span id="er1"></span></div>
-
-                   <div class="mt-2">
-                    <input type="text" class="form-control mt-3" id="adress" placeholder="Enter Address" >   
-                    <span id="er2"></span> </div>         
-                 
-                        <div class="mt-2">                   
-                            <select name="state" id="state" class="form-control">
-                                <option value="state">State</option>
-                                <option value="Himachal Pradesh">Himachal Pradesh</option>
-                                <option value="Punjab">Punjab</option>
-                                <option value="Haryana">Haryana</option>
-                                
-                            </select>
-                    <span id="er3"></span></div>
-              
-                        <div class="mt-2">                   
-                            <select name="city" id="city" class="form-control">
-                                <option value="city">City</option>
-                                <option value="Kangra">Kangra</option>
-                                <option value="Una">Una</option>
-                                <option value="Delhi">Hamirpur</option>
-                              
-                            </select>
-                    <span id="er4"></span></div>
-              
-                   <div>
-                    <input type="number" class="form-control mt-3" id="pin" placeholder="Enetr Pin">
-                    <span id="er5"></span></div>
-
-                    <button type="button" class="btn btn-primary mt-3" id="register" onclick="address()">
-                            Add Address
-                        </button>
-                                                                                  
-      </form>
-
-</div>
-</div>
-</div>
-
- 
-<!-- footer -->
-<footer class="text-center text-lg-start text-dark" style="background-color: #ffffff">
-    <div class="container text-center text-md-start mt-5">
-      
       <div class="row mt-3 pt-5">
         <div class="col-md-4 col-lg-4 col-xl-3 mx-auto mb-4">
           <h6 class="text-uppercase fw-bold">Grocery Delivery</h6>
           <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px">
-          <p>
-           Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, non? In provident sequi inventore minima, nulla fuga tempore iusto velit, illo autem consequuntur nostrum aut unde placeat. Fugit quae repellat vel,!
+          <p class="fs-6 text-dark fst-italic">
+            A grocery store is a retail store that primarily sells a general line of food, such as fruits, vegetables,
+            meat, poultry, canned and frozen foods. Synonyms for grocery stores include supermarkets and food stores.
           </p>
         </div>
-  
         <div class="col-md-4 col-lg-2 col-xl-2 mx-auto mb-4">
           <h6 class="text-uppercase fw-bold">Products</h6>
           <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px">
           <p>
-            <a href="#!" class="text-dark">Men's Clothing</a>
+            <a href="#!" class="text-dark text-decoration-none fst-italic">Men's Clothing</a>
           </p>
           <p>
-            <a href="#!" class="text-dark">Women's Clothing</a>
+            <a href="#!" class="text-dark text-decoration-none fst-italic">Women's Clothing</a>
           </p>
           <p>
-            <a href="#!" class="text-dark">Jewellery</a>
+            <a href="#!" class="text-dark text-decoration-none fst-italic">Jewellery</a>
           </p>
           <p>
-            <a href="#!" class="text-dark">Electronics</a>
+            <a href="#!" class="text-dark text-decoration-none fst-italic">Electronics</a>
           </p>
         </div>
-     
         <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
           <h6 class="text-uppercase fw-bold">Contact</h6>
-          <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px"><p><i class="fa-solid fa-house"></i> Address: Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, quos.</p>
-          <p><i class="fa-solid fa-envelope"></i> grocerydelivery@example.com</p>
-          <p><i class="fa-solid fa-phone"></i> +91 9874563210</p>
+          <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px">
+          <p><i class="fa-solid fa-house"></i> <span class="fw-bold">Address: </span><span class="fst-italic">Kangra, Himachal Pradesh</span></p>
+          <p><i class="fa-solid fa-envelope"></i> <span class="fw-bold">E-Mail: </span> <span class="fst-italic">grocerydelivery@example.com</span></p>
+          <p><i class="fa-solid fa-phone"></i> <span class="fw-bold">Phone: </span> <span class="fst-italic">+91-9874563210</span></p>
         </div>
-      
       </div>
-     
     </div>
-  
-  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-    ©2023 Copyright
-  </div>
+    <div class="text-center p-3 fst-italic" style="background-color: rgba(0, 0, 0, 0.2)">
+      Copyright © 2023. All rights reserved.
+    </div>
   </footer>
-    <script src="assets/js/bootstrap.bundle.js"></script>
-    <script src="assets/js/address.js"></script>
+  <script src="assets/js/bootstrap.bundle.js"></script>
+  <script src="assets/js/address.js"></script>
 </body>
+
 </html>

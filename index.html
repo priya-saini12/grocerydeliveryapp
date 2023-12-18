@@ -1,39 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/all.css">
     <link rel="stylesheet" href="assets/css/style.css">
-     <title>Grocery Delivery App</title>
+    <title>Grocery Delivery App</title>
 </head>
+
 <body>
-
-
-
-    <div class="container">
-        <div class="row">
-        <div class="col-6 offset-3 form p-3 rounded-3">
-        
-            <form>
-                <h2 class="text-center">Login</h2>
-                <span id="err1"></span>                        
-                <input type="email" class="form-control" id="email1" aria-describedby="email" placeholder="Enter email">              
-              <div>
-                <input type="password" class="form-control mt-3" id="password1" placeholder="Password" >
+    <main class="login-form py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-sm-10 col-md-8 col-lg-6 col-xl-5">
+                    <div class="card">
+                        <div class="card-header title-head">
+                            <h1 class="fs-2 fw-bold mb-0 text-capitalize fw-bold mb-4 text-center">Log in</h1>
+                        </div>
+                        <div class="card-body p-0">
+                            <form>
+                                <div class="row">
+                                    <span id="err1" class="text-danger fst-italic py-2"></span>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <input type="text" id="email1" class="form-control" placeholder="Email"
+                                                name="email" autofocus>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <input type="password" id="password1" placeholder="Password"
+                                                class="form-control" name="password">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 text-center">
+                                        <button type="button" class="btn log-btn w-100" onclick="login()">
+                                            Log in
+                                        </button>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <h5 class="my-4 text-center sign-up">Don't have an account? <a
+                                                    href="signup.html">Sign Up</a></h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <button class="btn btn-md btn-primary mt-3" type="button" onclick="login()">Login</button>
-                <p class="mt-1">Don't have an account? <a href="signup.html">Sign Up</a> </p>
-              </form>
-              
         </div>
-        </div>
-        </div>
+    </main>
 
-
-    
     <script src="assets/js/bootstrap.bundle.js"></script>
     <script src="assets/js/index.js"></script>
 </body>
+
 </html>

@@ -68,7 +68,7 @@ function registration() {
   
       localStorage.setItem(email, JSON.stringify(userData));
    
-    
+  
       window.location.href = "../home.html";
       return true;
     }

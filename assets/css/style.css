@@ -1,27 +1,96 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     background-image: url(../images/grocery6.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
-.form{
-    background-color: rgba(0, 0, 0, 0.54);;
-    margin-top: 5%;
-   }
-a{
-    text-decoration: none;
-    color: rgb(92, 216, 92);
+
+.login-form .card {
+    border: none !important;
+    box-shadow: 0 0.5rem 16px rgba(0, 0, 0, .15) !important;
+    padding: 35px !important;
 }
-#err1, #error1, #error2, #error3, #error4{
-    color: red;
+
+.card-header {
+    font-family: "Poppins", sans-serif;
+    background: transparent;
+    border: none;
+    padding: 0;
 }
-h2, p{
-    color: white;
+
+.login-form .form-group {
+    margin: 4px 0;
+    padding: 0 0 21.5px;
+    position: relative;
 }
-a:hover {
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 50px !important;
+    height: 50px;
+    padding: 10px 20px;
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    width: 100%;
+    color: #3d3d3d;
+}
+
+.log-btn,
+.form-group input.log-btn {
     color: #fff;
-  }
+    background: #89d9b7;
+    border-radius: 50px;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bolder;
+    min-width: 200px;
+    border: 1px solid #5bc7a1;
+    transition: 0.3s ease;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+}
+
+button.log-btn:hover,
+button.log-btn:active {
+    background: #89d9b7 !important;
+    border: 1px solid #5bc7a1 !important;
+    color: #fff !important;
+}
+
+.form-control:focus {
+    border-color: #5bc7a1 !important;
+    box-shadow: none;
+}
+
+.login-form .form-group {
+    margin: 4px 0;
+    padding: 0 0 21.5px;
+    position: relative;
+}
+
+.sign-up {
+    font-size: 16px;
+}
+
+a {
+    color: #89d9b7;
+}
+
+a:hover {
+    color: #89d9b7;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}

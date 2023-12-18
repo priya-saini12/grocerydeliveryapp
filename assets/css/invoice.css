@@ -4,13 +4,10 @@
     box-sizing: border-box;
 }
 body{
-    background-color:  rgb(99, 198, 99);
+    background-color:  #89d9b7;
 }
   a{
     text-decoration: none;
-}
-#invoice{
-    padding: 10px;
 }
 hr{
     margin: 0 0 10px 0;
