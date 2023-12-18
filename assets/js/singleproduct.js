@@ -16,22 +16,39 @@ fetch(`https://fakestoreapi.com/products/${productId}`)
                 <h4>Price: $${productDetails.price}</h4>
                 <button type="button" class="btn mt-4 card-button" id="addToCart">Add To Cart <i class="fa-solid fa-cart-shopping"></i></button>
             </div>`;
-       
+    
         const addToCartButton = document.getElementById("addToCart");
-        addToCartButton.addEventListener("click", () => {
-            const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
-            cartItems.push({
-                id: productDetails.id,
-                title: productDetails.title,
-                price: productDetails.price,
-                image: productDetails.image,
-                quantity: 3,
-            });
-            localStorage.setItem("cart", JSON.stringify(cartItems));
-            alert(`Added ${productDetails.title} to cart!`);
-        });
-    })
+addToCartButton.addEventListener("click", () => {
+    const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
 
+    const existingItem = cartItems.findIndex(item => item.id === productDetails.id);
+
+    if (existingItem !== -1) {
+        if (cartItems[existingItem].quantity + 1 > 10) {
+            alert("Cannot add more than 10 items to the cart!");
+            return;
+        }
+        cartItems[existingItem].quantity += 1;
+    } else {
+        if (cartItems.length + 1 > 10) {
+            alert("Cannot add more than 10 items to the cart!");
+            return;
+        }
+        cartItems.push({
+            id: productDetails.id,
+            title: productDetails.title,
+            price: productDetails.price,
+            image: productDetails.image,
+            quantity: 3,
+        });
+    }
+    localStorage.setItem("cart", JSON.stringify(cartItems));
+    alert(`Added ${productDetails.title} to cart!`);
+});
+
+
+
+});
     function logout() {
         localStorage.setItem('isLoggedIn', false);
         window.loggedInUser = null; 

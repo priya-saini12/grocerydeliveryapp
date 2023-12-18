@@ -5,25 +5,25 @@ let totalAmount = 0;
 cartItems.forEach((item, i) => {
   const product = document.createElement("div");
   product.innerHTML = `<div class="orderMain d-flex rounded-4 p-4 align-items-center">
-          <div class="col-1">
-            <button type="button" class="btn btn-danger" id="delete${i}"><i class="fa-solid fa-trash"></i></button>
-          </div>
-          <div class="col-3">
-            <h6 class="mb-0">${item.title}</h6>
-          </div>
-          <div class="col-1">
-            <img src="${item.image}" alt="${item.title}" class="cartImage">
-          </div>
-          <div class="col-1">
-            <p class="mb-0"><strong>Price:</strong> $${item.price}</p>
-          </div>
-          <div class="col-5 buton">
-            <button type="button" class="btn btn-success" id="increase${i}"><i class="fa-solid fa-plus"></i></button>
-            <p class="mb-0"><strong>Quantity:</strong> <span id="quantity${i}">${item.quantity}</span></p>
-            <button type="button" class="btn btn-primary" id="decrease${i}"><i class="fa-solid fa-minus"></i></button>
-            <p class="mb-0" id="itemPrice${i}"> <strong>Price: </strong>  $${item.price * item.quantity}</p>
-          </div>
-        </div>`;
+            <div class="col-1">
+              <button type="button" class="btn btn-danger" id="delete${i}"><i class="fa-solid fa-trash"></i></button>
+            </div>
+            <div class="col-3">
+              <h6 class="mb-0">${item.title}</h6>
+            </div>
+            <div class="col-1">
+              <img src="${item.image}" alt="${item.title}" class="cartImage">
+            </div>
+            <div class="col-1">
+              <p class="mb-0"><strong>Price:</strong> $${item.price}</p>
+            </div>
+            <div class="col-5 buton">
+              <button type="button" class="btn btn-success" id="increase${i}"><i class="fa-solid fa-plus"></i></button>
+              <p class="mb-0"><strong>Quantity:</strong> <span id="quantity${i}">${item.quantity}</span></p>
+              <button type="button" class="btn btn-primary" id="decrease${i}"><i class="fa-solid fa-minus"></i></button>
+              <p class="mb-0" id="itemPrice${i}"> <strong>Price: </strong>  $${(item.price * item.quantity).toFixed(2)}</p>
+            </div>
+  </div>`;
 
   cartDetails.appendChild(product);
 
@@ -61,23 +61,28 @@ cartItems.forEach((item, i) => {
     const totalItemPrice = document.getElementById(`itemPrice${i}`);
 
     totalQuantity.textContent = item.quantity;
-    totalItemPrice.textContent = `Price: $${item.price * item.quantity}`;
+    totalItemPrice.textContent = `Price: $${(item.price * item.quantity).toFixed(2)}`;
 
     cartItems[i] = item;
     localStorage.setItem("cart", JSON.stringify(cartItems));
   }
 
   function totalAmountt() {
-    totalAmount = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0);
-    changedTotalAmount.textContent = `Total Amount: $${totalAmount}`;
+    totalAmount = 0; 
+    for (let j = 0; j < cartItems.length; j++) {
+      totalAmount += cartItems[j].price * cartItems[j].quantity;
+    }
+    changedTotalAmount.textContent = `$${totalAmount.toFixed(2)}`;
   }
 });
 
 const changedTotalAmount = document.getElementById("totalAmount");
-changedTotalAmount.textContent = `$${totalAmount}`;
+changedTotalAmount.textContent = `$${totalAmount.toFixed(2)}`;
 
 function logout() {
   localStorage.setItem('isLoggedIn', false);
   window.loggedInUser = null;
   window.location.href = '../index.html';
 }
+
+
