@@ -44,7 +44,7 @@ function address() {
     };
   
    
-    localStorage.setItem(address, JSON.stringify(addressData));
+    localStorage.setItem("address", JSON.stringify(addressData));
   
     alert('Address added successfully!');
      
